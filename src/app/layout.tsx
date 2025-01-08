@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-providers";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import Navbar from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,8 +29,6 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
   return (
     <html lang="en">
@@ -43,6 +42,7 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            <Navbar />
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
