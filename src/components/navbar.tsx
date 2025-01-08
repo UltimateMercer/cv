@@ -31,9 +31,9 @@ const Navbar = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
           </div>
         </nav>
 
-        <div className="ml-4">
-          <ModeToggle />
+        <div className="ml-auto flex gap-2">
           <LanguageSwitcher />
+          <ModeToggle />
         </div>
       </div>
     </div>

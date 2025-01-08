@@ -3,18 +3,18 @@ import { persist } from "zustand/middleware";
 
 interface AppState {
   theme: "light" | "dark" | "system";
-  language: string;
+  locale: string;
   setTheme: (theme: "light" | "dark" | "system") => void;
-  setLanguage: (language: "en" | "pt-br") => void;
+  setLocale: (locale: "en" | "pt-br") => void;
 }
 
 export const useAppStore = create<AppState>()(
   persist(
     (set) => ({
       theme: "dark",
-      language: "en",
+      locale: "en",
       setTheme: (theme) => set({ theme }),
-      setLanguage: (language) => set({ language }),
+      setLocale: (locale) => set({ locale }),
     }),
     {
       name: "app-storage",

@@ -13,10 +13,11 @@ import {
 import { useAppStore } from "@/store/useAppStore";
 
 export function LanguageSwitcher() {
-  const { setLanguage, language } = useAppStore();
+  const { setLocale, locale } = useAppStore();
 
-  const handleLanguageChange = (language: "en" | "pt-br") => {
-    setLanguage(language);
+  const handleLanguageChange = (locale: "en" | "pt-br") => {
+    console.log(locale);
+    setLocale(locale);
   };
   return (
     <DropdownMenu>
@@ -31,7 +32,7 @@ export function LanguageSwitcher() {
           English
           <Check
             className={`ml-2 h-[1.2rem] w-[1.2rem] ${
-              language === "en" ? "block" : "hidden"
+              locale === "en" ? "block" : "hidden"
             }`}
           />
         </DropdownMenuItem>
@@ -39,7 +40,7 @@ export function LanguageSwitcher() {
           Portuguese
           <Check
             className={`ml-2 h-[1.2rem] w-[1.2rem] ${
-              language === "pt-br" ? "block" : "hidden"
+              locale === "pt-br" ? "block" : "hidden"
             }`}
           />
         </DropdownMenuItem>
