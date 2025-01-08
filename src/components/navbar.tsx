@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./theme-toggle";
 import { LanguageSwitcher } from "./language-switcher";
@@ -13,7 +13,7 @@ const Navbar = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
           {...props}
         >
           <div className="inline-flex mr-4">
-            <img
+            <Image
               src="/images/ultimate-logo-red.svg"
               className="!max-w-none mx-auto w-[56px] h-[56px] hidden dark:block"
               width="56"
@@ -21,7 +21,7 @@ const Navbar = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
               alt="Ultimate Mercer Logo"
             />
 
-            <img
+            <Image
               src="/images/ultimate-logo-dark.svg"
               className="!max-w-none mx-auto w-[56px] h-[56px] block dark:hidden"
               width="56"
