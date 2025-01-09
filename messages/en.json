@@ -1,5 +1,23 @@
 {
   "HomePage": {
     "title": "Hello world!"
+  },
+  "Me": {
+    "title": "Me",
+    "role": "Front-end Developer / Digital Design Student",
+    "location": "Pelotas, Brazil"
+  },
+  "About": {
+    "title": "About",
+    "text": "This is the about page"
+  },
+  "Experiences": {
+    "title": "Experiences"
+  },
+  "Skills": {
+    "title": "Skills"
+  },
+  "Education": {
+    "title": "Education"
   }
 }

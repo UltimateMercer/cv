@@ -1,5 +1,23 @@
 {
   "HomePage": {
     "title": "Olá panaca!"
+  },
+  "Me": {
+    "title": "Me",
+    "role": "Desenvolvedor Front-end / Estudante de Design Digital",
+    "location": "Pelotas, Brasil"
+  },
+  "About": {
+    "title": "Sobre",
+    "text": "This is the about page"
+  },
+  "Experiences": {
+    "title": "Experiências"
+  },
+  "Skills": {
+    "title": "Habilidades"
+  },
+  "Education": {
+    "title": "Educação"
   }
 }
