@@ -12,7 +12,8 @@
     "text": "This is the about page"
   },
   "Experiences": {
-    "title": "Experiences"
+    "title": "Experiences",
+    "inProgress": "In progress"
   },
   "Skills": {
     "title": "Skills"

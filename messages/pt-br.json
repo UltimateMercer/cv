@@ -12,7 +12,8 @@
     "text": "This is the about page"
   },
   "Experiences": {
-    "title": "Experiências"
+    "title": "Experiências",
+    "inProgress": "Em andamento"
   },
   "Skills": {
     "title": "Habilidades"
