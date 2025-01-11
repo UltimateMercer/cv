@@ -29,7 +29,7 @@ export default async function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans min-h-screen antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans min-h-screen antialiased`}
       >
         <IntlProvider>
           <ThemeProvider

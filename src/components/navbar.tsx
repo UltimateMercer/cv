@@ -6,7 +6,7 @@ import { LanguageSwitcher } from "./language-switcher";
 
 const Navbar = ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => {
   return (
-    <div className="border-b sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backgrop-filter]:bg-background/60 print:hidden">
+    <div className="border-b sticky top-0 z-50 bg-background/60 backdrop-blur supports-[backgrop-filter]:bg-background/60 print:hidden">
       <div className="flex h-16 justify-between items-center px-4 w-">
         <nav
           className={cn("flex items-center space-x-4 lg:space-x-6", className)}

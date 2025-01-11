@@ -47,13 +47,13 @@ export const socials = [
     name: "Behance",
     link: links.behance,
     icon: BehanceLogo,
-    printable: true,
+    printable: false,
   },
   {
     name: "Medium",
     link: links.medium,
     icon: MediumLogo,
-    printable: true,
+    printable: false,
   },
   {
     name: "Instagram",

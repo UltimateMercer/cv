@@ -2,7 +2,9 @@
 import { ExperienceCard } from "@/components/experience-card";
 import { Hero } from "@/components/hero";
 import NoiseBackground from "@/components/noise-background";
+import { Badge } from "@/components/ui/badge";
 import { getExperiences } from "@/services/experiences";
+import { skills } from "@/services/skills";
 import { useAppStore } from "@/store/useAppStore";
 import { allExperiences } from "contentlayer/generated";
 import { useTranslations } from "next-intl";
@@ -13,8 +15,7 @@ export default function Home() {
   const { locale } = useAppStore();
 
   const experiences = React.useMemo(() => getExperiences({ locale }), [locale]);
-  console.log(experiences);
-  console.log(allExperiences);
+
   return (
     <>
       <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
@@ -22,25 +23,36 @@ export default function Home() {
           <Hero />
           <article className="flex min-h-0 flex-col gap-y-1">
             <h2 className="text-2xl font-bold">{t("About.title")}</h2>
-            <p className="text-pretty text-base !font-mono">
-              Atualmente sou Desenvolvedor Front-end, tendo experiência
-              trabalhando com React e Vue.JS. Em projetos pessoais venho
-              praticando com frameworks back-end, como Express e NestJS, com o
-              intuito de me tornar um Desenvolvedor FullStack.
+            <p className="text-pretty text-base !font-mono text-justify print:text-left">
+              {t("About.text")}
             </p>
           </article>
           <article className="flex min-h-0 flex-col gap-y-2">
             <h2 className="text-2xl font-bold">{t("Experiences.title")}</h2>
-            {experiences.map((experience) => (
+            {experiences.map((experience, index) => (
               <ExperienceCard
                 experience={experience}
-                key={experience.company}
+                key={`${experience.company}-${index}`}
               />
             ))}
           </article>
+          <article className="flex min-h-0 flex-col gap-y-2">
+            <h2 className="text-2xl font-bold">{t("Skills.title")}</h2>
+            <div className="flex flex-wrap gap-1">
+              {skills.map((skill, index) => (
+                <Badge
+                  key={`${skill}-${index}`}
+                  variant="outline"
+                  className="mb-1"
+                >
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </article>
         </section>
+        <NoiseBackground density={0.8} opacity={0.075} />
       </main>
-      <NoiseBackground density={1} opacity={1} />
     </>
   );
 }

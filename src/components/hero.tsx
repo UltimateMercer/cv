@@ -13,19 +13,19 @@ export const Hero = () => {
   const { locale } = useAppStore();
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex gap-2 items-center justify-between relative">
       <div className="flex-1 space-y-1.5 font-sans">
         <h1 className="text-3xl font-bold leading-tight tracking-tighter">
           Julian Silva da Cunha
         </h1>
-        <p className="max-w-md text-pretty text-xl">{t("role")}</p>
+        <p className="text-pretty text-lg">{t("role")}</p>
         <div className="max-w-md items-center text-pretty font-mono">
-          <span className="inline-flex gap-x-1.5 align-baseline leading-none">
-            <Globe size={16} />
+          <span className="inline-flex gap-x-1.5 items-center leading-none">
+            <Globe size={24} />
             {t("location")}
           </span>
         </div>
-        <div className="flex print:flex-col gap-x-1 font-mono text-sm !mt-0.5">
+        <div className="flex print:flex-col gap-x-1.5 font-mono text-sm !mt-0.5">
           {socials.map((social) =>
             social.link === "" ? null : (
               <div key={social.name}>
@@ -48,20 +48,22 @@ export const Hero = () => {
                     <social.icon className="!size-6" />
                   </a>
                 </Button>
-                <a
-                  href={
-                    social.name === "Email"
-                      ? `mailto:${social.link}`
-                      : social.link
-                  }
-                  className="hidden print:flex items-center"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={ariaLabel(locale, social.name)}
-                >
-                  <social.icon size={24} className="mr-1" />
-                  {social.link}
-                </a>
+                {social.printable && (
+                  <a
+                    href={
+                      social.name === "Email"
+                        ? `mailto:${social.link}`
+                        : social.link
+                    }
+                    className="hidden print:flex items-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={ariaLabel(locale, social.name)}
+                  >
+                    <social.icon size={24} className="mr-1" />
+                    {social.link}
+                  </a>
+                )}
               </div>
             )
           )}

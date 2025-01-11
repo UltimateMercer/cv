@@ -49,7 +49,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             experience.tags.map((tag: string) => (
               <Badge
                 key={tag}
-                variant={"secondary"}
+                variant={"outline"}
                 className="rounded-md mr-1 print:bg-secondary"
               >
                 {tag}
