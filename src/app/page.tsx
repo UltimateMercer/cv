@@ -16,26 +16,31 @@ export default function Home() {
   console.log(experiences);
   console.log(allExperiences);
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl relative z-10 space-y-5 print:space-y-5">
-        <Hero />
-        <article className="flex min-h-0 flex-col gap-y-1">
-          <h2 className="text-2xl font-bold">{t("About.title")}</h2>
-          <p className="text-pretty text-base !font-mono">
-            Atualmente sou Desenvolvedor Front-end, tendo experiência
-            trabalhando com React e Vue.JS. Em projetos pessoais venho
-            praticando com frameworks back-end, como Express e NestJS, com o
-            intuito de me tornar um Desenvolvedor FullStack.
-          </p>
-        </article>
-        <article className="flex min-h-0 flex-col gap-y-2">
-          <h2 className="text-2xl font-bold">{t("Experiences.title")}</h2>
-          {experiences.map((experience) => (
-            <ExperienceCard experience={experience} key={experience.company} />
-          ))}
-        </article>
-      </section>
-      <NoiseBackground density={1} opacity={0.1} />
-    </main>
+    <>
+      <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+        <section className="mx-auto w-full max-w-3xl relative z-10 space-y-5 print:space-y-5">
+          <Hero />
+          <article className="flex min-h-0 flex-col gap-y-1">
+            <h2 className="text-2xl font-bold">{t("About.title")}</h2>
+            <p className="text-pretty text-base !font-mono">
+              Atualmente sou Desenvolvedor Front-end, tendo experiência
+              trabalhando com React e Vue.JS. Em projetos pessoais venho
+              praticando com frameworks back-end, como Express e NestJS, com o
+              intuito de me tornar um Desenvolvedor FullStack.
+            </p>
+          </article>
+          <article className="flex min-h-0 flex-col gap-y-2">
+            <h2 className="text-2xl font-bold">{t("Experiences.title")}</h2>
+            {experiences.map((experience) => (
+              <ExperienceCard
+                experience={experience}
+                key={experience.company}
+              />
+            ))}
+          </article>
+        </section>
+      </main>
+      <NoiseBackground density={1} opacity={1} />
+    </>
   );
 }
