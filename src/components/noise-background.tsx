@@ -124,7 +124,6 @@ export const NoiseBackground: React.FC<NoiseBackgroundProps> = ({
   size = 200,
   opacity = 0.2,
   blendMode = "overlay",
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   ...props
 }) => {
   const [encodedNoise, setEncodedNoise] = useState<string>("");
