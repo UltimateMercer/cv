@@ -55,7 +55,36 @@ export const Experience = defineDocumentType(() => ({
   // },
 }));
 
+export const Education = defineDocumentType(() => ({
+  name: "Education",
+  filePathPattern: `**/educations/**/*.{md,mdx}`,
+  contentType: "markdown",
+  fields: {
+    institution: {
+      type: "string",
+      required: true,
+    },
+    course: {
+      type: "string",
+      required: true,
+    },
+    status: {
+      type: "string",
+      required: true,
+    },
+    image: {
+      type: "string",
+      required: false,
+    },
+    locale: {
+      type: "enum",
+      options: ["en", "pt-br"],
+      required: true,
+    },
+  },
+}));
+
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Experience],
+  documentTypes: [Experience, Education],
 })
