@@ -5,6 +5,14 @@ import { withContentlayer } from "next-contentlayer2";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.imgur.com",
+      },
+    ],
+  },
   /* config options here */
 };
 
