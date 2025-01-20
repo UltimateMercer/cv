@@ -4,17 +4,19 @@ import { Hero } from "@/components/hero";
 import NoiseBackground from "@/components/noise-background";
 import { Badge } from "@/components/ui/badge";
 import { getExperiences } from "@/services/experiences";
+import { getEducation } from "@/services/education";
 import { skills } from "@/services/skills";
 import { useAppStore } from "@/store/useAppStore";
-import { allExperiences } from "contentlayer/generated";
 import { useTranslations } from "next-intl";
 import React from "react";
+import { EducationCard } from "@/components/education-card";
 
 export default function Home() {
   const t = useTranslations();
   const { locale } = useAppStore();
 
   const experiences = React.useMemo(() => getExperiences({ locale }), [locale]);
+  const educations = React.useMemo(() => getEducation({ locale }), [locale]);
 
   return (
     <>
@@ -49,6 +51,16 @@ export default function Home() {
                 </Badge>
               ))}
             </div>
+          </article>
+          <article className="flex min-h-0 flex-col gap-y-2">
+            <h2 className="text-2xl font-bold">{t("Education.title")}</h2>
+            {educations.map((education, index) => (
+              <EducationCard
+                education={education}
+                key={`${education.institution}-${index}`}
+                withImage
+              />
+            ))}
           </article>
         </section>
         <NoiseBackground density={0.8} opacity={0.075} />
