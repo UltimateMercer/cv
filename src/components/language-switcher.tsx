@@ -37,7 +37,7 @@ export function LanguageSwitcher() {
           />
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => handleLanguageChange("pt-br")}>
-          Portuguese
+          Português
           <Check
             className={`ml-2 h-[1.2rem] w-[1.2rem] ${
               locale === "pt-br" ? "block" : "hidden"
