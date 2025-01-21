@@ -35,13 +35,11 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           </div>
         </div>
 
-        <h4 className="font-mono text-base leading-none mt-0 mb-1">
-          {experience.role}
-        </h4>
+        <h4 className="text-base leading-none mt-0">{experience.role}</h4>
       </CardHeader>
-      <CardContent className="!px-0 !pb-2 mt-2">
+      <CardContent className="!px-0 !pb-2 mt-1">
         {experience.description && (
-          <p className="font-mono text-sm mb-2">{experience.description}</p>
+          <p className="text-sm mb-2">{experience.description}</p>
         )}
 
         <div className="flex flex-wrap gap-1">

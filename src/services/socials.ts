@@ -23,7 +23,7 @@ export const socials = [
     name: "Website",
     link: links.website,
     icon: Browser,
-    printable: true,
+    printable: false,
   },
   {
     name: "Email",

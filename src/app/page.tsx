@@ -25,7 +25,7 @@ export default function Home() {
           <Hero />
           <article className="flex min-h-0 flex-col gap-y-1">
             <h2 className="text-2xl font-bold">{t("About.title")}</h2>
-            <p className="text-pretty text-base !font-mono text-justify print:text-left">
+            <p className="text-pretty text-base text-justify print:text-sm print:text-left print:leading-tight">
               {t("About.text")}
             </p>
           </article>
@@ -63,7 +63,7 @@ export default function Home() {
             ))}
           </article>
         </section>
-        <NoiseBackground density={0.8} opacity={0.075} />
+        <NoiseBackground density={0.9} opacity={0.075} />
       </main>
     </>
   );
