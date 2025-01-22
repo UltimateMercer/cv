@@ -13,7 +13,7 @@ export const Hero = () => {
   const { locale } = useAppStore();
 
   return (
-    <div className="flex gap-2 justify-between relative">
+    <div className="flex gap-2 justify-between">
       <div className="flex-1 space-y-1.5 font-sans">
         <h1 className="text-3xl font-bold leading-tight tracking-wide">
           Julian Silva da Cunha
