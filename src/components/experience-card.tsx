@@ -48,7 +48,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
               <Badge
                 key={tag}
                 variant={"outline"}
-                className="rounded-md mr-1 print:bg-secondary"
+                className="rounded-md print:bg-secondary"
               >
                 {tag}
               </Badge>
