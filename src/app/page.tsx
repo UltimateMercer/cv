@@ -58,7 +58,6 @@ export default function Home() {
               <EducationCard
                 education={education}
                 key={`${education.institution}-${index}`}
-                withImage
               />
             ))}
           </article>

@@ -19,13 +19,13 @@ export const Hero = () => {
           Julian Silva da Cunha
         </h1>
         <p className="text-pretty text-lg">{t("role")}</p>
-        <div className="max-w-md items-center text-pretty font-mono">
+        <div className="max-w-md items-center text-pretty">
           <span className="inline-flex gap-x-1.5 items-center leading-none">
             <Globe size={24} />
             {t("location")}
           </span>
         </div>
-        <div className="flex print:flex-col gap-x-1.5 font-mono text-sm !mt-0.5">
+        <div className="flex print:flex-col gap-x-1.5 text-sm !mt-0.5">
           {socials.map((social) =>
             social.link === "" ? null : (
               <div key={social.name}>
