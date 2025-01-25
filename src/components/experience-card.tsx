@@ -27,7 +27,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           <h3 className="inline-flex text-xl items-center justify-center gap-x-1 font-semibold leading-none">
             {experience.company}
           </h3>
-          <div className="text-sm font-mono text-gray-500 capitalize">
+          <div className="text-sm text-gray-500 capitalize">
             {FormatMonthYear({ date: experience.start, locale })}
             {experience.end
               ? ` - ${FormatMonthYear({ date: experience.end, locale })}`
