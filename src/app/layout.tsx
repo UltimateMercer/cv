@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Barlow } from "next/font/google";
+import { Barlow } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-providers";
 
 import Navbar from "@/components/navbar";
 import { IntlProvider } from "@/components/intl-provider";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -61,9 +51,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${barlow.variable} ${geistSans.variable} ${geistMono.variable} font-sans min-h-screen antialiased`}
-      >
+      <body className={`${barlow.variable} font-sans min-h-screen antialiased`}>
         <IntlProvider>
           <ThemeProvider
             attribute="class"
