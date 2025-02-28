@@ -1,5 +1,4 @@
 "use client";
-import { useAppStore } from "@/store/useAppStore";
 import Image from "next/image";
 export interface EducationCardProps {
   education: {
